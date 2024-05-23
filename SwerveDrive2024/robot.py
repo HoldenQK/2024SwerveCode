@@ -7,7 +7,7 @@
 
 import commands2
 import wpilib
-
+from wpilib.shuffleboard import Shuffleboard
 from robotcontainer import RobotContainer
 
 
@@ -16,6 +16,13 @@ class MyRobot(commands2.TimedCommandRobot):
         # Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         # autonomous chooser on the dashboard.
         self.container = RobotContainer()
+
+    #Work in progress for setting up shuffleboard for useful info in testing.
+    # def robotPeriodic(self) -> None:
+    #     wpilib.SmartDashboard.putNumber("Strafe", self.container.)
+    #     wpilib.SmartDashboard.putBoolean("", )
+    #     wpilib.SmartDashboard.putBoolean("", )
+    #     wpilib.SmartDashboard.putBoolean("", )
 
     def teleopInit(self) -> None:
         self.container.__init__()
